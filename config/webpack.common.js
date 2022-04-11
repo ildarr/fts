@@ -5,7 +5,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const { src, build, assets } = require('./paths');
 
 module.exports = {
-  entry: [`${src}/index.tsx`],
+  entry: [`${src}/index.ts`],
 
   plugins: [
     new CopyWebpackPlugin({
@@ -13,7 +13,7 @@ module.exports = {
     }),
 
     new HtmlWebpackPlugin({
-      favicon: `${src}/images/favicon.ico`,
+      //favicon: `${src}/images/favicon.ico`,
       template: `${src}/index.html`,
     }),
 
