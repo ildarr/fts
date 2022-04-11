@@ -8,15 +8,11 @@ module.exports = merge(common, {
   devtool: 'inline-source-map',
 
   devServer: {
-    historyApiFallback: true,
     open: true,
     compress: true,
     hot: true,
     port: 8080,
   },
-
-  //eslint-loader ??
-  // eslint-webpack-plugin
 
   module: {
     rules: [

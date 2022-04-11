@@ -14,7 +14,8 @@ module.exports = merge(common, {
   output: {
     path: build,
     publicPath: '/',
-    filename: 'js/[name].[contenthash].bundle.js',
+    filename: 'js/[name].[contenthash].js',
+    clean: true,
   },
 
   module: {
@@ -26,7 +27,7 @@ module.exports = merge(common, {
           {
             loader: 'css-loader',
             options: {
-              importLoaders: 2,
+              importLoaders: 1,
               sourceMap: false,
               modules: {
                 localIdentName: '[local]__[hash:base64:5]',
@@ -62,9 +63,9 @@ module.exports = merge(common, {
     runtimeChunk: {
       name: 'runtime',
     },
- //   splitChunks: {
- //     chunks: 'all'
- //   }
+    splitChunks: {
+      chunks: 'all'
+    }
   },
 
   performance: {

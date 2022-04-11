@@ -2,21 +2,10 @@ const webpack = require('webpack');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
-//const { src, build, public } = require('./paths');
 const { src, build, assets } = require('./paths');
 
 module.exports = {
   entry: [`${src}/index.tsx`],
-
-  output: {
-    path: build,
-    filename: '[name].bundle.js',
-    publicPath: '/',
-
-    // Очищает директорию dist перед обновлением бандла
-    // Свойство стало доступно с версии 5.20.0, до этого использовался CleanWebpackPlugin
-    clean: true,
-  },
 
   plugins: [
     new CopyWebpackPlugin({
@@ -35,14 +24,6 @@ module.exports = {
 
   module: {
     rules: [
-     // { test: /\.(js|jsx)$/, use: ['babel-loader'] },
-
-      {
-        test: /\.(js|jsx)$/,
-        use: ['babel-loader'],
-        exclude: /node_modules/,
-      },
-
       {
         test: /\.tsx?$/,
         use: 'ts-loader',
