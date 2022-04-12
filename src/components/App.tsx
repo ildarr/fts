@@ -1,7 +1,7 @@
-export const App = () => {
-  console.log('wrt');
-  return (
-    <div>App</div>
-  )
-};
+import { FC } from "react";
 
+interface AppProps {
+  title: string;
+}
+
+export const App: FC<AppProps> = ({ title }) => <div>{title}</div>;
