@@ -1,8 +1,8 @@
-import React from "react";
-import * as ReactDOM from "react-dom";
-import { App } from "@/components/App";
+import React from 'react';
+import * as ReactDOM from 'react-dom';
+import { App } from '@/components/App';
 
-const container = document.getElementById("app");
+const container = document.getElementById('app');
 
 // eslint-disable-next-line @typescript-eslint/ban-ts-comment
 // @ts-ignore
