@@ -1,2 +1,7 @@
-export const App = () => (<div>App</div>);
+export const App = () => {
+  console.log('wrt');
+  return (
+    <div>App</div>
+  )
+};
 
