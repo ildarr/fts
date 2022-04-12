@@ -5,7 +5,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const { src, build, assets } = require('./paths');
 
 module.exports = {
-  entry: [`${src}/index.ts`],
+  entry: [`${src}/index.tsx`],
 
   plugins: [
     new CopyWebpackPlugin({
